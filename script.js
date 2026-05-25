@@ -16,8 +16,11 @@ document.body.appendChild(star);
 }
 
 
-
 function enterUniverse(){
+
+document.querySelector(
+".enterButton"
+).style.display="none";
 
 document.getElementById(
 "universeContent"
@@ -29,8 +32,7 @@ document.getElementById(
 
 function showContent(type){
 
-let box=
-document.getElementById(
+let box=document.getElementById(
 "contentBox"
 );
 
@@ -52,7 +54,6 @@ box.innerHTML=`
 }
 
 
-
 if(type==="debate"){
 
 box.innerHTML=`
@@ -63,12 +64,9 @@ box.innerHTML=`
 
 <p>Champion of Debate 15.0</p>
 
-<p>Love expressing ideas and critical thinking.</p>
-
 `;
 
 }
-
 
 
 if(type==="study"){
@@ -77,16 +75,13 @@ box.innerHTML=`
 
 <h2>📚 Study Life</h2>
 
-<p>Currently learning:</p>
+<p>Learning AI and programming.</p>
 
-<p>AI • HCI • Programming</p>
-
-<p>Building projects and exploring the universe.</p>
+<p>Building projects and exploring new things.</p>
 
 `;
 
 }
-
 
 
 if(type==="projects"){
@@ -94,7 +89,6 @@ if(type==="projects"){
 box.innerHTML=`
 
 <h2>⭐ Projects</h2>
-
 
 <div class="card">
 
