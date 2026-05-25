@@ -98,3 +98,44 @@ border-radius:20px;
         transform: scale(1.8);
     }
 }
+.menu{
+
+margin:40px;
+}
+
+.menu button{
+
+margin:10px;
+
+padding:12px 25px;
+
+border:none;
+
+border-radius:20px;
+
+cursor:pointer;
+
+font-size:16px;
+
+transition:0.3s;
+}
+
+.menu button:hover{
+
+transform:scale(1.1);
+}
+
+.contentBox{
+
+background:rgba(255,255,255,0.1);
+
+padding:25px;
+
+margin:30px auto;
+
+border-radius:20px;
+
+max-width:700px;
+
+min-height:100px;
+}
