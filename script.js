@@ -1,4 +1,4 @@
-for (let i = 0; i < 80; i++) {
+for(let i=0;i<80;i++){
 
 let star=document.createElement("div");
 
@@ -8,16 +8,31 @@ star.style.left=Math.random()*100+"vw";
 
 star.style.top=Math.random()*100+"vh";
 
-star.style.animationDuration=Math.random()*3+2+"s";
+star.style.animationDuration=
+Math.random()*3+2+"s";
 
 document.body.appendChild(star);
 
 }
 
 
+
+function enterUniverse(){
+
+document.getElementById(
+"universeContent"
+).style.display="block";
+
+}
+
+
+
 function showContent(type){
 
-let box=document.getElementById("contentBox");
+let box=
+document.getElementById(
+"contentBox"
+);
 
 
 if(type==="about"){
@@ -37,6 +52,7 @@ box.innerHTML=`
 }
 
 
+
 if(type==="debate"){
 
 box.innerHTML=`
@@ -54,15 +70,48 @@ box.innerHTML=`
 }
 
 
+
 if(type==="study"){
 
 box.innerHTML=`
 
 <h2>📚 Study Life</h2>
 
-<p>Learning AI and programming.</p>
+<p>Currently learning:</p>
 
-<p>Building projects and exploring new things.</p>
+<p>AI • HCI • Programming</p>
+
+<p>Building projects and exploring the universe.</p>
+
+`;
+
+}
+
+
+
+if(type==="projects"){
+
+box.innerHTML=`
+
+<h2>⭐ Projects</h2>
+
+
+<div class="card">
+
+<h3>English-to-French Translator</h3>
+
+<p>NLP Translation Chatbot</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>GPT2 Poetic Chatbot</h3>
+
+<p>AI-generated poetic responses</p>
+
+</div>
 
 `;
 
