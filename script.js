@@ -1,30 +1,21 @@
-for(let i=0;i<80;i++){
+for(let i=0;i<100;i++){
 
-let star=document.createElement("div");
+let star=document.createElement(
+"div"
+);
 
 star.className="star";
 
-star.style.left=Math.random()*100+"vw";
+star.style.left=
+Math.random()*100+"vw";
 
-star.style.top=Math.random()*100+"vh";
+star.style.top=
+Math.random()*100+"vh";
 
 star.style.animationDuration=
 Math.random()*3+2+"s";
 
 document.body.appendChild(star);
-
-}
-
-
-function enterUniverse(){
-
-document.querySelector(
-".enterButton"
-).style.display="none";
-
-document.getElementById(
-"universeContent"
-).style.display="block";
 
 }
 
@@ -54,6 +45,7 @@ box.innerHTML=`
 }
 
 
+
 if(type==="debate"){
 
 box.innerHTML=`
@@ -64,9 +56,12 @@ box.innerHTML=`
 
 <p>Champion of Debate 15.0</p>
 
+<p>Love expressing ideas and critical thinking.</p>
+
 `;
 
 }
+
 
 
 if(type==="study"){
@@ -75,13 +70,16 @@ box.innerHTML=`
 
 <h2>📚 Study Life</h2>
 
-<p>Learning AI and programming.</p>
+<p>Learning:</p>
 
-<p>Building projects and exploring new things.</p>
+<p>AI • HCI • Programming</p>
+
+<p>Exploring the universe one step at a time.</p>
 
 `;
 
 }
+
 
 
 if(type==="projects"){
@@ -89,6 +87,7 @@ if(type==="projects"){
 box.innerHTML=`
 
 <h2>⭐ Projects</h2>
+
 
 <div class="card">
 
