@@ -1,12 +1,45 @@
 body{
     margin:0;
 
-    font-family:Arial, sans-serif;
+    font-family:'Courier New', monospace;
 
-    background:#0f172a;
+    background:
+    radial-gradient(circle at top, #312e81 0%, #0f172a 50%, #020617 100%);
 
     color:white;
+
+    overflow-x:hidden;
 }
+
+/* 星空背景 */
+
+body::before{
+    content:"";
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    top:0;
+    left:0;
+
+    background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#c4b5fd 1px, transparent 1px),
+    radial-gradient(#f9a8d4 1px, transparent 1px);
+
+    background-size:
+    80px 80px,
+    120px 120px,
+    160px 160px;
+
+    opacity:0.35;
+
+    z-index:-1;
+}
+
+/* 首页 */
 
 .home-page{
 
@@ -21,9 +54,18 @@ body{
     text-align:center;
 }
 
+.home-container{
+
+    animation:float 4s ease-in-out infinite;
+}
+
 .home-container h1{
 
-    font-size:55px;
+    font-size:60px;
+
+    color:#e9d5ff;
+
+    text-shadow:0 0 15px #c084fc;
 }
 
 .home-container p{
@@ -31,31 +73,47 @@ body{
     color:#cbd5e1;
 
     font-size:22px;
+
+    margin-top:-10px;
 }
+
+/* Enter按钮 */
 
 .enter-btn{
 
     display:inline-block;
 
-    margin-top:30px;
+    margin-top:35px;
 
-    padding:15px 35px;
+    padding:16px 38px;
 
-    background:#a855f7;
+    background:#7e22ce;
 
     color:white;
 
     text-decoration:none;
 
-    border-radius:30px;
+    border-radius:40px;
+
+    border:2px solid #c084fc;
+
+    font-size:18px;
+
+    box-shadow:0 0 20px rgba(192,132,252,0.5);
 
     transition:0.3s;
 }
 
 .enter-btn:hover{
 
-    background:#7e22ce;
+    background:#a855f7;
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 30px rgba(216,180,254,0.8);
 }
+
+/* 导航栏 */
 
 nav{
 
@@ -63,7 +121,9 @@ nav{
 
     top:0;
 
-    background:#1e293b;
+    background:rgba(15,23,42,0.85);
+
+    backdrop-filter:blur(8px);
 
     padding:20px 40px;
 
@@ -72,6 +132,13 @@ nav{
     justify-content:space-between;
 
     align-items:center;
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+nav h2{
+
+    color:#e9d5ff;
 }
 
 nav a{
@@ -81,6 +148,8 @@ nav a{
     text-decoration:none;
 
     margin-left:20px;
+
+    transition:0.3s;
 }
 
 nav a:hover{
@@ -88,24 +157,32 @@ nav a:hover{
     color:#c084fc;
 }
 
+/* 卡片 */
+
 .card{
 
     width:75%;
 
-    margin:40px auto;
+    margin:50px auto;
 
     padding:35px;
 
-    background:#1e293b;
+    background:rgba(30,41,59,0.7);
 
-    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.08);
 
-    box-shadow:0 0 20px rgba(168,85,247,0.2);
+    border-radius:25px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 25px rgba(168,85,247,0.15);
 }
 
 .card h1{
 
-    color:#c084fc;
+    color:#d8b4fe;
+
+    margin-bottom:20px;
 }
 
 .card h3{
@@ -113,10 +190,20 @@ nav a:hover{
     color:#93c5fd;
 }
 
+.card p,
+.card li{
+
+    color:#e2e8f0;
+
+    line-height:1.8;
+}
+
 li{
 
     margin:10px 0;
 }
+
+/* Footer */
 
 footer{
 
@@ -125,4 +212,21 @@ footer{
     padding:40px;
 
     color:#cbd5e1;
+}
+
+/* 漂浮动画 */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
 }
